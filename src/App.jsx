@@ -23,12 +23,20 @@ function App(){
 
 let foodItems= ["Dal","Green Vegetable","Roti","Salad","Milk","Fruits","Nuts","Eggs"];
 
+let textToShow= "List of healthy food items";
+
+ const handleOnChange = (event) =>{console.log(event.target.value);
+  textToShow=event.target.value;
+ };  // it helps us see what the changes are being made in the search bar. it is added here to pass as prop to FoodInput component
+
 return(
 <>
 <Container>
  <h1 className="food-heading">Healthy Food</h1>
  <FoodInput/>
 <ErrorMsg items={foodItems}></ErrorMsg>
+<FoodInput handleOnChange={handleOnChange}></FoodInput> 
+<p>{textToShow}</p>
 <FoodItems items={foodItems}></FoodItems>
 </Container>
 
