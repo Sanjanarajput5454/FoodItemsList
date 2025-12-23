@@ -33,10 +33,9 @@ return(
 <>
 <Container>
  <h1 className="food-heading">Healthy Food</h1>
- <FoodInput/>
-<ErrorMsg items={foodItems}></ErrorMsg>
 <FoodInput handleOnChange={handleOnChange}></FoodInput> 
 <p>{textToShow}</p>
+<ErrorMsg items={foodItems}></ErrorMsg>
 <FoodItems items={foodItems}></FoodItems>
 </Container>
 
